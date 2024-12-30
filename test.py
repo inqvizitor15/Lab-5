@@ -13,9 +13,12 @@ line3 = 'Римские числа: XVII, XLXI, XII, CXVI'
 
 line4 = 'RGB colors: #1AFFa1, #171c3a, #72CAD5, #ABC'
 
+line5 = '[123!4], tyutigd,     [russia7]'
 result_lp = re.findall(r"\w ?\d{3,4} ?\w{2}[ -]?(?:\d{2,3})?", line)
 result_ip0 = re.findall(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", line2)
 result_ip = re.findall(r"(?:^|\b(?<!\.))(?:1?\d\d?|2[0-4]\d|25[0-5])(?:\.(?:1?\d\d?|2[0-4]\d|25[0-5])){3}(?=$|[^\w.])", line2)
 result_roman = re.findall(r"\b[IVXLCM]+", line3)
 result_rgb = re.findall(r"#(?:[0-9a-fA-F]{3}){1,2}", line4)
-print(result_rgb)
+
+rsr = re.findall(r"[[]]", line5)
+print(rsr)
